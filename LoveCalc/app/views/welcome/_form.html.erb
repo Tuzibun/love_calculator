@@ -1,0 +1,7 @@
+<%= form_tag '/welcome' do |f| %>
+	<p><%= label_tag(:fname, "First Person's Name: ") %><%= text_field_tag :fname %>
+	</p>
+	<p><%= label_tag(:sname, "Second Person's Name: ") %><%= text_field_tag :sname %>
+	</p>
+	<p><%= submit_tag "Calculate Compatibility!" %></p>
+<% end %>
