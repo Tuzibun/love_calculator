@@ -5,16 +5,15 @@ class WelcomeController < ApplicationController
 	end
 
 	def create
-		@response = HTTParty.get("https://love-calculator.p.mashape.com/getPercentage?fname=(params[:fname])&sname=(params[:sname])",
+		@response = HTTParty.get("https://love-calculator.p.mashape.com/getPercentage?fname=#{params[:fname]}&sname=#{params[:sname]}",
   			headers:{
-    		"X-Mashape-Key" => "KmN2pzz6TWmsh9iYsK35ROv4YQYop1ncRSjjsnGznOJe1ABEG0",
+    		"X-Mashape-Key" => "pYpIkmLxoLmsh4dox9t3GT1eTzpop16jErajsndr3yJ0weZQFa",
     		"Accept" => "application/json"
 		    	}
 		    )
+		# binding.pry
 		render "result"
 	end
-
-
 
 
 end
